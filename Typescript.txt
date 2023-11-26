@@ -1,0 +1,81 @@
+
+
+TypeScript
+***********************
+  => it is a super set of Javascript
+  => typeScript =  type + javaScript
+  => Developed by microSoft
+  
+ limitations of javaScript
+ ---------------------------------------
+ 1) variable declarations
+   ex: let,var,const
+    
+	let a =  10;
+	a = 20 // valid
+	a =  "sravani" // you can assign like this in javaScript.
+	a = true  // valid
+	a = 10.45 // valid
+	a = null //valid
+	a = { } // valid
+	a = [ ] // valid
+
+***there is no strict typeschecking in javaScript.
+
+ex-2)  let greet = function(name , age){
+	
+	// some statements
+	
+}
+greet("sravani"); // valid 
+
+ => in javaScript we can pass two or three or no parameters at runtime and  its perfectly valid. 
+but as a developer you need to know what type of function it is .
+
+
+
+
+
+Declarations
+*********************
+
+=> Tsc( type script compiler) will convert type script file to javaScript file.
+=>  Because we dont have browsers to support  typeScript programs/ files.
+
+
+
+
+
+installation 
+...................................
+for installation :: npm install -g typescript
+for version :: tsc --version
+for compilation :: tsc thefilename
+for execition :: node thefilename
+
+=>> insted of executing two cmds everytime we can install 'ts-node' globally and we can use "ts-node filename"
+
+/* cmd is npm install -g ts-node */
+
+
+DataTypes
+........................................
+String
+Number
+boolean
+enum
+any
+undefined
+null
+Object
+Array
+
+
+Operators
+**********************
+Arthmatic Operators( + - % * /)
+Shorthand math(+= , -=)
+incre/dec operator(++, --)
+conditional Operators(<,>,<=,>=,....)
+Logical Operators(&&,||)
+Turnery Operators(if else.....)
