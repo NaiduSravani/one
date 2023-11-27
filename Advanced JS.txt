@@ -1,0 +1,174 @@
+Advanced Concepts:
+-------------------------------------
+1) Nested Function Scope
+2) Closures
+3) Currying
+4) this keyword
+5) Prototype
+6) Prototypal inheritance
+7) Class
+8) Iterables and Iterators
+9) Generators
+
+
+
+Scope
+****************
+there are three types of scopes   1. Block { the variables which are declared inside the curly braces} ex: if, switch,for.......
+																 2.Functional
+																 3.Global
+																 
+																 
+																 
+ // Example for scope concept.
+console.log('this is from scope block')
+let a = 10
+{
+    let a = 20
+    console.log(a)
+}
+console.log(a)
+ 
+ => the imp point is if we re-declared a variable with in the same scope then we get error. but out of the scope if we decalre the  variable  with same name .
+ 
+ 
+for -in loop
+_____________________
+for in loop basically used for iterate through keys in a object.
+
+//for-in loop
+			let Student = {
+				name: 'Sravani',
+				age: 22,
+				course: 'ReactJS',
+			}
+for(let P in Student){
+    console.log(P,Student[P])
+}
+
+
+for -of loop
+_____________________
+
+it is used to ierate trough values, directly.
+//for -of loop
+			let num = [ ]
+			num[0] = 5
+			num[99] = 20
+			for (x of num){
+			console.log(x)
+			}
+			
+			
+
+
+
+Destructuring
+___________________________
+mainly used to call nested object elemnts.
+
+
+let employee ={
+    name:' emp',
+    age: 33,
+    course: 'Reactjs',
+    address:{
+        home:'Ap',
+        city:'hyderabad',
+        place:'gachibowli'
+    },
+    hobbies:{
+        regular:{
+            hobbies:'listing music'
+        },
+        occational:'playing cards'
+    }
+}
+let {home,city} = employee.address
+console.log(`HOME: ${home},
+CITY: ${city}`)
+
+let {hobbies} = employee.hobbies.regular
+console.log(`HOBBIES: ${hobbies}`)
+
+
+
+Spread-Operator(...)
+___________________________
+ we use the operator to merge the arrays and create new array then we use (... )operator
+ 
+ 
+// joining two arrays
+let arr1 = ['blue','black','green','yellow']
+let arr2 = ['grey','peach']
+let colors = [...arr1,...arr2]
+
+console.log(colors)
+
+
+this keyword
+_____________________
+
+
+OOPs concept
+*******************************************
+
+Class
+***************************
+blueprint of an object.
+from es-6 we are allowed classes in programs.
+
+inheritance
+******************
+inheritance is the concept of using parent properties into child .for this we have a keyword called 'extends'.
+if you want parent properties to use in child we use super() for that.
+
+parent-classe => person
+child-classe =>employee
+
+
+modules
+************************
+modules are basically used to split the code into small partisiations.
+it was used to maintain clean code in our application.
+modules are defined in other files for accessing those files we use 'import' or 'export' keywords
+
+
+setInterval(), clear interval(), setTmeout() 
+**********************************************
+these three are predefined functions in javascript
+setInterval() => it is basically used for repeatedly call a function with a fixed time delay in time.
+setTmeout() => it is basically used for call a function at particular amount of time and it calls function only once at given time.
+clear interval() =>this is used to clear the setInterval function calls .
+
+Asyncronus programing 
+*******************************
+
+sync  :  executing the methods/ statements/service one after another is sync.
+ 
+async : executing the methods/ statements/service calls at a time is called async.
+ we can achieve async by using 1)call backs 2) promises 3)async, await
+ 
+ 
+ 
+1) callbacks
+*************************
+::  a function which can take another function as a perameter is called callback functions.
+
+ex: let sum = (a,b)=>{
+    return a+b
+}
+let mul = (a,b)=>{
+    return a*b
+}
+let calculator = (a,b,callback) =>{
+	return callback(a,b)
+}
+let output = calculator(10,20,sum)
+console.log(output)
+let output1 = calculator(10,20,mul)
+console.log(output1)
+
+
+
+
